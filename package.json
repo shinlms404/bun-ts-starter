@@ -36,7 +36,7 @@
     "start": "bun run src/index.ts",
     "test:watch": "bun test --watch",
     "lint": "eslint .",
-    "lint:fix": "eslint .",
+    "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
