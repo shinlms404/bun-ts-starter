@@ -1,0 +1,59 @@
+{
+  "name": "bun-ts-starter",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "bun@1.0.18",
+  "description": "",
+  "author": "Shin Chan <xxx@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/shinlms/bun-ts-starter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinlms/bun-ts-starter.git"
+  },
+  "bugs": "https://github.com/shinlms/bun-ts-starter/issues",
+  "keywords": [
+    "bun"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run build.mjs",
+    "prepublishOnly": "bun run build",
+    "dev": "bun --watch run src/index.ts",
+    "start": "bun run src/index.ts",
+    "test:watch": "bun test --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.4.6",
+    "bun-plugin-dts": "^0.2.1",
+    "bun-types": "latest",
+    "eslint": "^8.56.0",
+    "lint-staged": "^15.2.0",
+    "simple-git-hooks": "^2.9.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bun lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
