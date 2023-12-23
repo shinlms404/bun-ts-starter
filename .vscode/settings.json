@@ -4,7 +4,7 @@
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "eslint.rules.customizations": [
     { "rule": "*-indent", "severity": "off" },
